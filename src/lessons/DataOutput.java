@@ -1,4 +1,4 @@
-package aulas;
+package lessons;
 
 public class DataOutput {
     // Basic structure of a Java 25 code

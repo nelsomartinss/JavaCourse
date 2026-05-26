@@ -1,4 +1,4 @@
-package lessons;
+package Lessons.SequentialStructure;
 
 import java.util.Scanner;
 

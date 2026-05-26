@@ -1,4 +1,4 @@
-package lessons;
+package Lessons.SequentialStructure;
 
 public class MathematicalFunctions {
     void main(){

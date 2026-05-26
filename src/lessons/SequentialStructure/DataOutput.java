@@ -1,4 +1,4 @@
-package lessons;
+package Lessons.SequentialStructure;
 
 public class DataOutput {
     // Basic structure of a Java 25 code

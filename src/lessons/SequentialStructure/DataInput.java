@@ -1,4 +1,4 @@
-package lessons;
+package Lessons.SequentialStructure;
 import java.util.Locale;
 import java.util.Scanner; // Importing the scanner object
 

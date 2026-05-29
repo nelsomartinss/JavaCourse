@@ -27,7 +27,7 @@ public class Ex008 {
         System.out.printf("Square: %.3f\n", Square);
         System.out.printf("Retangle : %.3f\n", Rectangle);
 
-
+        sc.close();
 
     }
 }

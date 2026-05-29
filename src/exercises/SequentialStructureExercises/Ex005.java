@@ -19,5 +19,7 @@ public class Ex005 {
         difference = (A * B) - (C * D);
 
         System.out.printf("\nDIFFERENCE = %d\n", difference);
+
+        sc.close();
     }
 }

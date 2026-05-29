@@ -15,5 +15,7 @@ public class Ex003 {
         sum = num1 + num2;
         System.out.printf("SUM = %d\n", sum);
 
+        sc.close();
+
     }
 }

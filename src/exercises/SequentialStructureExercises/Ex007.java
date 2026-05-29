@@ -33,5 +33,7 @@ public class Ex007 {
 
         total = ((double) numbersOfPart1 * unitValuePart1) + ((double) numbersOfPart2 * unitValuePart2);
         System.out.printf(localeBR, "\nTotal is R$%.2f\n", total);
+
+        sc.close();
     }
 }

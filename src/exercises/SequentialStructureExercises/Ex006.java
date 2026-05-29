@@ -20,5 +20,7 @@ public class Ex006 {
         System.out.printf("\nNumber: %d\n", employeeId);
         System.out.printf("Salary: U$ %.2f\n", salary);
 
+        sc.close();
+
     }
 }

@@ -13,5 +13,7 @@ public class Ex004 {
         area = pi * Math.pow(radius, 2);
 
         System.out.printf("A=%.4f\n", area);
+
+        sc.close();
     }
 }

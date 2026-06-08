@@ -2,7 +2,7 @@ package Lessons.LoopStructure;
 
 import java.util.Scanner;
 
-public class WhileStructure {
+public class LoopWhileStructure {
     void main(){
         int number, acucumulator = 0;
         Scanner sc = new Scanner(System.in);

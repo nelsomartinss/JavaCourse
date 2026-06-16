@@ -6,9 +6,12 @@ public class ProgramUsingOOP {
     void main(){
         Scanner sc = new Scanner(System.in);
         double p, areaX, areaY;
+
         Triangle x, y; // triangle-type variables
+
+        // instantiating
         x = new Triangle();
-        y = new Triangle(); // instantiating
+        y = new Triangle();
 
         System.out.print("Enter the measures of triangle X: ");
         x.a = sc.nextDouble(); // storing a value in attribute "a" of object "x"
@@ -19,11 +22,8 @@ public class ProgramUsingOOP {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        p = (x.a + x.b + x.c) / 2;
-        areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
-
-        p = (y.a + y.b + y.c) / 2;
-        areaY = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
+        areaX = x.area(); // calling a method "area" from object x and y
+        areaY = y.area();
 
         System.out.printf("\nArea of triangle X: %.4f\n", areaX);
         System.out.printf("znArea of triangle Y: %.4f\n", areaY);

@@ -1,4 +1,4 @@
-package lessons.OOPFundamentals;
+package Lessons.OOPFundamentals;
 
 import lessons.OOPFundamentals.Entities.ProductOverloading;
 
@@ -21,7 +21,7 @@ public class Overloading {
         System.out.print("Price: ");
         price = sc.nextDouble();
         System.out.print("Quantity in stock: ");
-        quantity = sc.nextInt();
+        quantity = sc.nextInt(); // never used
 
         // Overloading -- Other constructor with different parameters
         ProductOverloading product = new ProductOverloading(name, price);

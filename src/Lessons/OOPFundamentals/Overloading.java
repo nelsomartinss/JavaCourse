@@ -1,6 +1,6 @@
 package Lessons.OOPFundamentals;
 
-import lessons.OOPFundamentals.Entities.ProductOverloading;
+import Lessons.OOPFundamentals.Entities.ProductOverloading;
 
 import java.util.Locale;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package lessons.OOPFundamentals.Entities;
+package Lessons.OOPFundamentals.Entities;
 
 public class ProductOverloading {
     public String name;

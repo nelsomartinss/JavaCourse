@@ -11,12 +11,13 @@ public class BankAccount {
         Scanner sc = new Scanner(System.in);
 
         Account account;
-        String accountNumber, accountHolder;
-        double initialDeposit;
+        int accountNumber;
+        String accountHolder;
+        double deposit;
         char option;
 
         System.out.print("\nEnter account number: ");
-        accountNumber = sc.nextLine();
+        accountNumber = sc.nextInt();
 
         System.out.print("Enter account holder: ");
         accountHolder = sc.nextLine();
@@ -26,25 +27,25 @@ public class BankAccount {
 
         if (option == 'y' || option == 'Y'){
             System.out.print("Enter the initial deposit value: ");
-            initialDeposit = sc.nextDouble();
+            deposit = sc.nextDouble();
             // Constructor
-            account = new Account(accountNumber, accountHolder, initialDeposit);
+            account = new Account(accountNumber, accountHolder, deposit);
         } else {
             // Overloading
             account = new Account(accountNumber, accountHolder);
         }
 
         System.out.print("\nAccount data: ");
-        System.out.print(account);
+        System.out.println(account);
 
         System.out.print("\nEnter a deposit value: ");
         account.addDeposit(sc.nextDouble());
         System.out.print("\nUpdated account data:");
-        System.out.print(account);
+        System.out.println(account);
 
         System.out.print("\nEnter a withdraw value: ");
         account.withdraw(sc.nextDouble());
         System.out.print("\nUpdated account data: ");
-        System.out.print(account);
+        System.out.println(account);
     }
 }

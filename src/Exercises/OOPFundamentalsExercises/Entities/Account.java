@@ -2,19 +2,19 @@ package Exercises.OOPFundamentalsExercises.Entities;
 
 public class Account {
     // Encapsulation
-    private String accountNumber;
-    private String accountHolder;
+    private final int accountNumber;
+    private final String accountHolder;
     private double deposit; // class attribute, java initializes a double to 0.0 automatically
 
     // Constructor
-    public Account(String accountNumber, String accountHolder, double deposit){
+    public Account(int accountNumber, String accountHolder, double deposit){
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.deposit = deposit;
     }
 
     // Overloading
-    public Account(String accountNumber, String accountHolder){
+    public Account(int accountNumber, String accountHolder){
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
     }
@@ -26,7 +26,7 @@ public class Account {
     }
     // remove
     public void withdraw(double amount){
-        this.deposit -= amount-5;
+        this.deposit -= amount + 5;
     }
     // custom toString
     public String toString(){
@@ -34,10 +34,5 @@ public class Account {
                 "\nAccount %s\nHolder: %s\nBalance: $%.2f",
                 accountNumber, accountHolder, deposit
         );
-    }
-
-    // Setters
-    public void setAccountHolder(String accountHolder){
-        this.accountHolder = accountHolder;
     }
 }

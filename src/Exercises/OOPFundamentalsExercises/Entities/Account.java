@@ -2,37 +2,56 @@ package Exercises.OOPFundamentalsExercises.Entities;
 
 public class Account {
     // Encapsulation
-    private final int accountNumber;
-    private final String accountHolder;
-    private double deposit; // class attribute, java initializes a double to 0.0 automatically
+    private int number; // get
+    private String holder; // set
+    private double balance; // get
 
-    // Constructor
-    public Account(int accountNumber, String accountHolder, double deposit){
-        this.accountNumber = accountNumber;
-        this.accountHolder = accountHolder;
-        this.deposit = deposit;
+    // Constructor with two arguments
+    public Account(int number, String holder){
+        this.number = number;
+        this.holder = holder;
     }
 
-    // Overloading
-    public Account(int accountNumber, String accountHolder){
-        this.accountNumber = accountNumber;
-        this.accountHolder = accountHolder;
+    // Overloading (constructor with three arguments)
+    public Account(int number, String holder, double initialDeposit){
+        this.number = number;
+        this.holder = holder;
+        deposit(initialDeposit); // using the method
     }
 
-    // Methods
+    // Since the attributes are private, we need to create getter and setter methods
+    public int getNumber() {
+        return number;
+    }
+
+    public int getHolder() {
+        return number;
+    }
+
+    public void setHolder(String holder) {
+        this.holder = holder;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
     // add
-    public void addDeposit(double deposit){
-        this.deposit += deposit;
+    // encapsuling the business logic within the method
+    public void deposit(double amount){
+        balance += amount;
     }
+
     // remove
     public void withdraw(double amount){
-        this.deposit -= amount + 5;
+        balance -= amount + 5.0;
     }
+
     // custom toString
     public String toString(){
         return String.format(
                 "\nAccount %s\nHolder: %s\nBalance: $%.2f",
-                accountNumber, accountHolder, deposit
+                number, holder, balance
         );
     }
 }

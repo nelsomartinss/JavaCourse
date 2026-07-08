@@ -11,41 +11,46 @@ public class BankAccount {
         Scanner sc = new Scanner(System.in);
 
         Account account;
-        int accountNumber;
-        String accountHolder;
-        double deposit;
-        char option;
+        int number;
+        String holder;
+        double initialDeposit;
+        char response;
 
         System.out.print("\nEnter account number: ");
-        accountNumber = sc.nextInt();
+        number = sc.nextInt();
 
         System.out.print("Enter account holder: ");
-        accountHolder = sc.nextLine();
+        sc.nextLine();
+        holder = sc.nextLine();
 
         System.out.print("Is there na initial deposit (y/n)? : ");
-        option = sc.next().charAt(0);
+        response = sc.next().charAt(0);
 
-        if (option == 'y' || option == 'Y'){
+        if (response == 'y' || response == 'Y'){
             System.out.print("Enter the initial deposit value: ");
-            deposit = sc.nextDouble();
-            // Constructor
-            account = new Account(accountNumber, accountHolder, deposit);
+            initialDeposit = sc.nextDouble();
+            // Overloading (constructor with three arguments)
+            account = new Account(number, holder, initialDeposit);
         } else {
-            // Overloading
-            account = new Account(accountNumber, accountHolder);
+            // Constructor with two arguments
+            account = new Account(number, holder);
         }
 
         System.out.print("\nAccount data: ");
         System.out.println(account);
 
+        // deposit
         System.out.print("\nEnter a deposit value: ");
-        account.addDeposit(sc.nextDouble());
+        account.deposit(sc.nextDouble());
         System.out.print("\nUpdated account data:");
         System.out.println(account);
 
+        // withdraw
         System.out.print("\nEnter a withdraw value: ");
         account.withdraw(sc.nextDouble());
         System.out.print("\nUpdated account data: ");
         System.out.println(account);
+
+        sc.close();
     }
 }

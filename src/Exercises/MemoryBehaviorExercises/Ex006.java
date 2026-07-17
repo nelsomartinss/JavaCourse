@@ -3,13 +3,14 @@ package Exercises.MemoryBehaviorExercises;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Ex003 {
+public class Ex006 {
     void main(){
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        int sumEven = 0;
+        int sumEven = 0, evenCounter = 0;
+        double averageEvens;
 
-        System.out.print("\nEnter the number of numbers you want to add: ");
+        System.out.print("\nHow many elements will the array have? : ");
         int[] arrayNumbers = new int[sc.nextInt()];
 
         for(int i = 0; i < arrayNumbers.length; i++) {
@@ -17,16 +18,19 @@ public class Ex003 {
             arrayNumbers[i] = sc.nextInt();
         }
 
-        // Number of evens
-        System.out.println("\nEven numbers: ");
         for (int arrayNumber : arrayNumbers) {
             if (arrayNumber % 2 == 0) {
-                System.out.printf("%d ", arrayNumber);
-                sumEven++;
+                sumEven += arrayNumber;
+                evenCounter++;
             }
         }
 
-        System.out.printf("\nNumber of evens: %d",  sumEven);
+        if(sumEven == 0.0){
+            System.out.println("\nNo even numbers!");
+        } else {
+            averageEvens = (double) sumEven / evenCounter;
+            System.out.printf("\nAverage of the even numbers: %.1f\n", averageEvens);
+        }
 
         sc.close();
     }
